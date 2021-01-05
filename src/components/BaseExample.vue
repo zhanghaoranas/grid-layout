@@ -1,8 +1,24 @@
-<template></template>
+<template>
+    <div class="wrapper">sadf</div>
+</template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-export default defineComponent({});
+    import { defineComponent, onMounted } from 'vue';
+    import HtmlShow from './layout/HtmlShow.vue';
+    export default defineComponent({
+        components: {
+            HtmlShow,
+        },
+        setup() {
+            onMounted(() => {
+                console.log(HtmlShow);
+            });
+        },
+    });
 </script>
 
-<style></style>
+<style lang="less" scoped>
+    .wrapper {
+        display: grid;
+    }
+</style>
